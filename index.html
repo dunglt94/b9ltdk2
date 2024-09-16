@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[*Bài tập] Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<style>
+    input {
+        width: 100px;
+    }
+</style>
+<body>
+<!--Bài 1-->
+<h3>Bài 1: Chuyển từ độ C sang độ F.</h3>
+<label><input type="number" name="bai1_degree" id="bai1_degree" placeholder="&deg;C"></label>
+<button onclick="bai1_convertCtoF()">Convert</button>
+<p id="bai1_result">Result:</p>
+
+<!--Bài 2-->
+<h3>Bài 2: Chuyển từ mét sang feet.</h3>
+<label><input type="number" name="bai2_meter" id="bai2_meter" placeholder="m"></label>
+<button onclick="bai2_MtoFt()">Convert</button>
+<p id="bai2_result">Result:</p>
+
+<!--Bài 3-->
+<h3>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h3>
+<label><input type="number" name="bai3_square_side" id="bai3_square_side" placeholder="cm"></label>
+<button onclick="bai3_squareArea()">Tính</button>
+<p id="bai3_result">Result:</p>
+
+<!--Bài 4-->
+<h3>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h3>
+<label><input type="number" name="bai4_rectangle_side1" id="bai4_rectangle_side1" placeholder="cm"></label>
+<label><input type="number" name="bai4_rectangle_side2" id="bai4_rectangle_side2" placeholder="cm"></label>
+<button onclick="bai4_rectangleArea()">Tính</button>
+<p id="bai4_result">Result:</p>
+
+<!--Bài 5-->
+<h3>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h3>
+<label><input type="number" name="bai5_triangle_side1" id="bai5_triangle_side1" placeholder="cm"></label>
+<label><input type="number" name="bai5_triangle_side2" id="bai5_triangle_side2" placeholder="cm"></label>
+<button onclick="bai5_triangleArea()">Tính</button>
+<p id="bai5_result">Result:</p>
+
+<!--Bài 6-->
+<h3>Bài 6: Giải phương trình bậc 1.</h3>
+<label><input type="number" name="bai6_number1" id="bai6_number1" placeholder="a"></label>
+<label><input type="number" name="bai6_number2" id="bai6_number2" placeholder="b"></label>
+<label><input type="number" name="bai6_number3" id="bai6_number3" placeholder="c"></label>
+<button onclick="bai6_find_x()">Tính</button>
+<p id="bai6_result">Result: </p>
+
+<!--Bài -->
+<h3>Bài 7: Giải phương trình bậc 2.</h3>
+<label><input type="number" name="bai7_number1" id="bai7_number1" placeholder="a"></label>
+<label><input type="number" name="bai7_number2" id="bai7_number2" placeholder="b"></label>
+<label><input type="number" name="bai7_number3" id="bai7_number3" placeholder="c"></label>
+<button onclick="bai7_find_x()">Tính</button>
+<p id="bai7_result">Result: </p>
+
+<!--Bài 8-->
+<h3>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+    Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h3>
+<label><input type="number" name="bai8_age" id="bai8_age" placeholder="Tuổi"></label>
+<button onclick="bai8_checkAge()">Kiểm tra</button>
+<p id="bai8_result">Result:</p>
+
+<!--Bài 9-->
+<h3>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+    Điều kiện để a,b,c là cạnh của một tam giác là:</h3>
+<label><input type="number" name="bai9_side1" id="bai9_side1" placeholder="a"></label>
+<label><input type="number" name="bai9_side2" id="bai9_side2" placeholder="b"></label>
+<label><input type="number" name="bai9_side3" id="bai9_side3" placeholder="c"></label>
+<button onclick="bai9_check()">Tính</button>
+<p id="bai9_result">Result: </p>
+
+<!--Bài 10-->
+<h3>Bài 10: Viết chương trình tính giá điện.</h3>
+<label><input type="number" name="bai10_usage" id="bai10_usage" placeholder="kWh"></label>
+<button onclick="bai10_calElectricitybill()">Tính</button>
+<p id="bai10_result">Result:</p>
+
+<!--Bài 11-->
+<h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
+<p>
+    <label for="bai11_income">Thu nhập:</label>
+    <input type="number" name="bai11_income" id="bai11_income">
+    đ
+</p>
+<p id="bai11_personal_income">Giảm trừ cá nhân: 11,000,000 đ</p>
+<p>
+    <label for="bai11_NoP">Giảm trừ phụ thuộc: 4,400,000 đ x</label>
+    <input type="number" name="bai11_number_of_people" id="bai11_NoP"
+           placeholder="Số người phụ thuộc " style="width: 140px">
+    người
+</p>
+<button onclick="bai11_calPersonaltax()">Tính</button>
+<p id="bai11_result1">Thu nhập tính thuế:</p>
+<p id="bai11_result2">Thuế thu nhập cá nhân:</p>
+
+<!--Bài 12-->
+<h3>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu,
+    số tháng cho vay và lãi xuất hàng tháng.
+</h3>
+<p>
+    <label for="bai12_initial_amount">Số tiền ban đầu:</label>
+    <input type="number" name="bai12_initial_amount" id="bai12_initial_amount" min="0">
+    đ
+</p>
+<p>
+    <label for="bai12_months">Số tháng cho vay:</label>
+    <input type="number" name="bai12_months" id="bai12_months" min="0">
+    tháng
+</p>
+<p>
+    <label for="bai12_annual_interest">Lãi xuất năm:</label>
+    <input type="number" name="bai12_annual_interest" id="bai12_annual_interest" min="0">
+    %
+</p>
+<p id="bai12_monthly_interest">Lãi xuất hàng tháng:</p>
+<button onclick="bai12_calTotalInterest()">Tính</button>
+<p id="bai12_totalMoney">Tổng số tiền phải trả:</p>
+<p id="bai12_result">Số tiền lãi phải trả:</p>
+
+
+<script src="index.js"></script>
+</body>
+</html>
